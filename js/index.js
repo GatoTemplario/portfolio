@@ -43,19 +43,25 @@
             image: 'images/project1.jpg',
             alt: 'Shop drawings',
             description: 'Concurred detailed engineering and shop drawings',
-            details: 'Developed comprehensive shop drawings and detailed engineering documents for various civil projects, ensuring accuracy and compliance with industry standards.'
+            details: 'Developed comprehensive shop drawings and detailed engineering documents for various civil projects, using specialized software like StruBIM Steel.'
         },
         'Wind farms development': {
             image: 'images/project2.jpg',
             alt: 'Wind farms development',
             description: 'Managed the road modelling and documentation process',
-            details: 'Led the road modelling and documentation for wind farm projects, optimizing infrastructure layout and ensuring seamless integration with existing environments.'
+            details: 'Led the road modeling and documentation efforts for wind farm projects in collaboration with a multi-disciplinary team.'
         },
         'Internal processes improvement': {
             image: 'images/project3.jpg',
             alt: 'Internal processes improvement',
             description: 'Aided in the optimization of internal processes',
-            details: 'Collaborated with cross-functional teams to streamline internal processes, enhancing efficiency and reducing project turnaround times.'
+            details: 'Proposed strategic improvements to key processes, aiming to deliver top-tier products while optimizing team efficiency.'
+        },
+        '...and more': {
+            image: 'images/project3.jpg',
+            alt: '...and more',
+            description: 'Secondary roles on plenty of projects',
+            details: 'During my time as a junior project engineer, i took part of multiple projects, developing documentation for industrial buildings and residential houses.'
         }
     };
 
