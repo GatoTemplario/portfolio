@@ -42,7 +42,7 @@
         'Shop drawings': {
             image: 'images/project1.jpg',
             alt: 'Shop drawings',
-            description: 'Concurred detailed engineering and shop drawings',
+            description: 'Concurred detailed engineering and shop drawings 11',
             details: 'Developed comprehensive shop drawings and detailed engineering documents for various civil projects, using specialized software like StruBIM Steel.'
         },
         'Wind farms development': {
@@ -55,13 +55,13 @@
             image: 'images/project3.jpg',
             alt: 'Internal processes improvement',
             description: 'Aided in the optimization of internal processes',
-            details: 'Proposed strategic improvements to key processes, aiming to deliver top-tier products while optimizing team efficiency.'
+            details: 'As a result of these efforts, I contributed to a dramatic reduction in project hours without compromising the quality of presentations.'
         },
         '...and more': {
             image: 'images/project3.jpg',
             alt: '...and more',
-            description: 'Secondary roles on plenty of projects',
-            details: 'During my time as a junior project engineer, i took part of multiple projects, developing documentation for industrial buildings and residential houses.'
+            description: 'Secondary roles',
+            details: 'As a junior project engineer, I supported diverse projects by developing detailed documentation for industrial buildings and residential houses.'
         }
     };
 
