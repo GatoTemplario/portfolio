@@ -1,9 +1,14 @@
 /* Root Variables */
 :root {
-    --primary: #2a9d8f; /* Teal */
-    --secondary: #e76f51; /* Coral */
-    --dark: #264653; /* Dark Blue-Green */
-    --light: #f8f9fa; /* Light Gray */
+    --primary: #1e3a8a; /* Dark Blue */
+    --secondary: #f97316; /* Vibrant Orange */
+    --background: #121212; /* Very Dark Gray */
+    --surface: #1f2937; /* Darker Gray for surfaces */
+    --text-primary: #e5e7eb; /* Light Gray for primary text */
+    --text-secondary: #9ca3af; /* Medium Gray for secondary text */
+    --accent: #3b82f6; /* Accent Blue */
+    --error: #ef4444; /* Red for errors */
+    --success: #10b981; /* Green for success messages */
 }
 
 /* Global Styles */
@@ -16,8 +21,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: var(--dark);
-    background: var(--light);
+    color: var(--text-primary);
+    background: var(--background);
 }
 
 html {
@@ -29,10 +34,10 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(31, 41, 55, 0.95); /* Equivalent to var(--surface) with slight transparency */
     padding: 0.5rem 1rem;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
 }
@@ -53,7 +58,7 @@ html {
 }
 
 .navbar-link {
-    color: var(--dark);
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -97,7 +102,7 @@ html {
     position: absolute;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.2) 21%, transparent 22%);
+    background: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.1) 21%, transparent 22%);
     background-size: 50px 50px;
     animation: moveBackground 20s linear infinite;
 }
@@ -110,7 +115,7 @@ html {
 .hero-content {
     position: relative;
     z-index: 1;
-    color: white;
+    color: var(--text-primary);
     text-align: center;
 }
 
@@ -138,19 +143,22 @@ html {
 
 /* About Me Section Styles */
 .about-me {
-    background: white;
+    background: var(--surface);
     padding: 5rem 2rem;
 }
 
-.about-container {
+.about-me-container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    display: flex;                /* Stack children vertically */
+    flex-direction: column;
+    gap: 2rem;                    /* Space between elements */
 }
 
 .section-title {
     margin-bottom: 2rem;
-    color: var(--primary);
+    color: var(--text-primary);   /* Consistent with your changes */
     font-size: 2rem;
 }
 
@@ -158,13 +166,14 @@ html {
     font-size: 1.2rem;
     line-height: 1.8;
     max-width: 800px;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto;
+    color: var(--text-secondary);
 }
 
 /* Skills Section Styles */
 .skills {
     padding: 5rem 2rem;
-    background: white;
+    background: var(--background);
 }
 
 .skills-grid {
@@ -181,11 +190,11 @@ html {
 .skill-card {
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     transition: transform 0.3s;
     width: 100%;
     max-width: 400px;
-    background: var(--light);
+    background: var(--surface);
 }
 
 .skill-card:hover {
@@ -194,19 +203,19 @@ html {
 
 .skill-title {
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: var(--text-primary);
     font-size: 1.5rem;
 }
 
 .skill-description {
     font-size: 1rem;
-    color: var(--dark);
+    color: var(--text-secondary);
 }
 
 /* Projects Section Styles */
 .projects {
     padding: 5rem 2rem;
-    background: #f8f9fa;
+    background: var(--background);
 }
 
 .project-grid {
@@ -224,8 +233,8 @@ html {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    background: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    background: var(--surface);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     cursor: pointer;
     width: 100%;
     max-width: 400px;
@@ -248,26 +257,26 @@ html {
 
 .project-title {
     margin-bottom: 0.5rem;
-    color: var(--primary);
+    color: var(--text-primary);
     font-size: 1.3rem;
 }
 
 .project-description {
     font-size: 1rem;
-    color: var(--dark);
+    color: var(--text-secondary);
 }
 
 /* Personal Life Section Styles */
 .personal-life {
     padding: 5rem 2rem;
-    background: white;
+    background: var(--surface);
 }
 
-.about-container {
+.personal-life-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr; /* Two columns */
     gap: 2rem;
 }
 
@@ -275,7 +284,7 @@ html {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 .carousel {
@@ -299,16 +308,16 @@ html {
 
 .image-description {
     padding: 0.5rem;
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.9rem;
-    background: white;
+    background: var(--background);
 }
 
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.8);
+    background: rgba(31, 41, 55, 0.8); /* Semi-transparent surface */
     border: none;
     width: 40px;
     height: 40px;
@@ -319,6 +328,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-primary);
 }
 
 .carousel-btn.prev {
@@ -342,12 +352,12 @@ html {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
 
 .dot.active {
-    background: white;
+    background: var(--accent);
 }
 
 .about-text {
@@ -359,31 +369,32 @@ html {
     line-height: 1.8;
     max-width: 800px;
     margin: 2rem auto 0;
+    color: var(--text-secondary);
 }
 
 /* Call to Action Section Styles */
 .cta-section {
     padding: 4rem 2rem;
     text-align: center;
-    background: var(--light);
+    background: var(--background);
 }
 
 .cta-title {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--dark);
+    color: var(--text-primary);
 }
 
 .cta-description {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: var(--dark);
+    color: var(--text-secondary);
 }
 
 .cta-button {
     display: inline-block;
     background: var(--secondary);
-    color: white;
+    color: var(--text-primary);
     text-decoration: none;
     padding: 1rem 2rem;
     border-radius: 5px;
@@ -393,14 +404,14 @@ html {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 /* Contact Section Styles */
 .contact {
     padding: 5rem 2rem;
-    background: var(--primary);
-    color: white;
+    background: var(--background);
+    color: var(--text-primary);
 }
 
 .contact-form {
@@ -419,11 +430,18 @@ html {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    background: var(--surface);
+    color: var(--text-primary);
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+    color: var(--text-secondary);
 }
 
 .contact-button {
     background: var(--secondary);
-    color: white;
+    color: var(--text-primary);
     border: none;
     padding: 1rem 2rem;
     border-radius: 5px;
@@ -445,14 +463,14 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(18, 18, 18, 0.95); /* Almost black with slight transparency */
     z-index: 1000;
     justify-content: center;
     align-items: center;
 }
 
 .modal {
-    background: white;
+    background: var(--surface);
     padding: 2rem;
     border-radius: 10px;
     width: 90%;
@@ -490,26 +508,26 @@ html {
 .modal-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--primary);
+    color: var(--accent);
 }
 
 .modal-description {
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: var(--dark);
+    color: var(--text-secondary);
 }
 
 .project-details {
     font-size: 0.95rem;
-    color: var(--dark);
+    color: var(--text-secondary);
 }
 
 .modal-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--primary);
-    color: white;
+    background: var(--accent);
+    color: var(--background);
     border: none;
     width: 30px;
     height: 30px;
@@ -525,12 +543,12 @@ html {
 .footer {
     text-align: center;
     padding: 2rem;
-    background: var(--light);
+    background: var(--surface);
 }
 
 .footer-text {
     font-size: 1rem;
-    color: var(--dark);
+    color: var(--text-secondary);
 }
 
 .footer-link {
@@ -544,7 +562,7 @@ html {
 }
 
 .footer-icon {
-    fill: #0077b5; /* LinkedIn Blue */
+    fill: #3b82f6; /* Accent Blue */
     width: 40px;
     height: 40px;
 }
@@ -582,9 +600,17 @@ html {
         width: 80%;
     }
 
-    .about-container {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
+    .about-me-container,
+    .personal-life-container {
+        /* Flex and grid properties are already defined separately */
+    }
+
+    .about-me-container {
+        /* Already flex with column direction */
+    }
+
+    .personal-life-container {
+        /* Already grid with two columns */
     }
 }
 
@@ -629,7 +655,7 @@ html {
 
 /* Carousel Active Dot */
 .carousel-dots .dot.active {
-    background: white;
+    background: var(--accent);
 }
 
 /* Optional: Scrollbar Styling for Modal */
@@ -638,7 +664,7 @@ html {
 }
 
 .modal::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 }
 
