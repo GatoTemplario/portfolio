@@ -58,7 +58,7 @@
             details: 'As a result of these efforts, I contributed to a dramatic reduction in project hours without compromising the quality of presentations.'
         },
         '...and more': {
-            image: 'images/project3.jpg',
+            image: 'images/project4.jpg',
             alt: '...and more',
             description: 'Secondary roles',
             details: 'As a junior project engineer, I supported diverse projects by developing detailed documentation for industrial buildings and residential houses.'
