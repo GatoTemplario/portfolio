@@ -125,7 +125,7 @@
     });
 
     // Carousel Functionality
-    const carousel = document.querySelector('.carousel');
+    // const carousel = document.querySelector('.carousel');
     if (carousel) {
         const items = carousel.querySelectorAll('.carousel-item');
         const prevBtn = document.querySelector('.carousel-btn.prev');
